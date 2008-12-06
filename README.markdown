@@ -1,4 +1,4 @@
-!Altered View 
+# Altered View 
 
 A next-gen template engine -- cause mixing ruby codes and semantic html (ehem erb) SUCKS!!
 
@@ -7,7 +7,7 @@ erb was created in 1999, a 20th century technology.
 Ruby Template Framework for the 21st Century!
 
 
-Initialization
+## Initialization
 --------------
 
 <label id='some_label'/>
@@ -18,7 +18,7 @@ end
 
 <label id='some_label'>John Doe</lable> 
 
-Conditions
+## Conditions
 ----------
 
 <% if @order.size > 0 %>
@@ -38,7 +38,7 @@ end
 
 - actually removes from resulting html, not just turning off style 
 
-Forms
+## Forms
 -----
 
 - No more form helpers, set object and url in twin.
@@ -58,7 +58,7 @@ this.session_form.login = Session.login
 this.session_form.password = Session.password 
 
 
-Collections
+## Collections
 -----------
 
 <div id='object_collection'>
@@ -69,7 +69,7 @@ object_collection = Object.find(:all)
 object_collection.value = Object.boo
 
 
-Partials/Includes
+## Partials/Includes
 ------------------
 
 <div id='products_partial'></header>
@@ -93,7 +93,7 @@ self.products.each do |product|
 end
 
 
-Application Layout
+## Application Layout
 --------
 
 in the PageView class you can specify your enclosing application layout
@@ -109,7 +109,7 @@ end
 <div id='view_body'/>
 
 
-Themes
+## Themes
 ------
 
 Amazingly easy to build Themes.
@@ -119,7 +119,7 @@ All you need is standard HTML with the right set of css tags!
 No code just switch out html files.
 
 
-Header/Bundling
+## Header/Bundling
 ---------------
 
 | parameters to controller are available in View or variables set
