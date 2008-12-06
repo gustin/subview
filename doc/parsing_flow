@@ -1,0 +1,30 @@
+
+
+Parse Pass
+----------
+
+html is parsed into DOM tree
+View class properties are populates with DOM values
+
+Do you need to parse? Just let ruby magic set properties in setting phase and try to rejoin with html afterwards? Even if method declaration is needed, wouldn't work for intelli-sense but who the fuck cares? 
+
+ParseTree, ruby2ruby
+Setting
+-------
+
+DOM values are set and manipulated
+
+self.some_label = SomeLabel 
+ 
+
+Repopulate Html
+---------------
+
+parse html into dom structure, populate elements, execute ruby 
+
+
+Ajax Phase? 
+-----------
+
+Possibly house ajax method logic in View class or Presenter? 
+Controller only handles routing and redirection, so if ajax redirects
