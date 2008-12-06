@@ -1,12 +1,11 @@
-Twin Views is a next-gen template engine, cause mixing ruby codes and semantic html (ehem erb) SUCKS!!
+!Altered View 
 
+A next-gen template engine -- cause mixing ruby codes and semantic html (ehem erb) SUCKS!!
 
-Layout!!
---------
+erb was created in 1999, a 20th century technology.
 
-Usual is application to include individual html bits -- very nice actually
+Ruby Template Framework for the 21st Century!
 
-still allow defining layout, traditional html include? 
 
 Initialization
 --------------
@@ -37,13 +36,13 @@ def initialize
 	end
 end
 
-actually removes from resulting html, not just turning off style 
+- actually removes from resulting html, not just turning off style 
 
 Forms
 -----
 
-   No more form helpers, set object and url in twin.
-   name in html can match object or not
+- No more form helpers, set object and url in twin.
+- name in html can match object or not
 
 <form action="/session" method="post" id='session_form'>
 	<label class="gt-login-label">Username</label>
@@ -73,16 +72,52 @@ object_collection.value = Object.boo
 Partials/Includes
 ------------------
 
-<div id='header'></header>
+<div id='products_partial'></header>
 
-def intitialze 
-   header.load = 'some_partial'
+- automatically includes ruby partial view if id has _partial
+
+_products.html
+_products_view.rb
+
+- mini-ruby code snippet
+- html include type partial
+
+- has reference to the Page View it is included in! allowing no passing of variables
+
+<label id='product_name'/>
+<label id='product_cost'/>
+
+self.products.each do |product|
+    self.product_name = product.name
+    self.product_cost = currency_value(product.cost)
 end
 
-def intitialze
-   @orders = Order.find(:all)
-   header.load('some_partial', :orders => @orders)
+
+Application Layout
+--------
+
+in the PageView class you can specify your enclosing application layout
+
+class ProductView < PageView 
+  template :application 
+
 end
+
+
+\layouts\application.html
+
+<div id='view_body'/>
+
+
+Themes
+------
+
+Amazingly easy to build Themes.
+
+All you need is standard HTML with the right set of css tags!
+
+No code just switch out html files.
+
 
 Header/Bundling
 ---------------
