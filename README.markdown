@@ -8,7 +8,7 @@ Ruby Template Framework for the 21st Century!
 
 
 ## Initialization
---------------
+
 
 <label id='some_label'/>
 
@@ -19,7 +19,7 @@ end
 <label id='some_label'>John Doe</lable> 
 
 ## Conditions
-----------
+
 
 <% if @order.size > 0 %>
     -- order table --
@@ -39,7 +39,7 @@ end
 - actually removes from resulting html, not just turning off style 
 
 ## Forms
------
+
 
 - No more form helpers, set object and url in twin.
 - name in html can match object or not
@@ -59,7 +59,7 @@ this.session_form.password = Session.password
 
 
 ## Collections
------------
+
 
 <div id='object_collection'>
    <tr><td id='object_value'>  </td></tr>
@@ -70,7 +70,7 @@ object_collection.value = Object.boo
 
 
 ## Partials/Includes
-------------------
+
 
 <div id='products_partial'></header>
 
@@ -94,7 +94,7 @@ end
 
 
 ## Application Layout
---------
+
 
 in the PageView class you can specify your enclosing application layout
 
@@ -110,7 +110,7 @@ end
 
 
 ## Themes
-------
+
 
 Amazingly easy to build Themes.
 
@@ -120,7 +120,6 @@ No code just switch out html files.
 
 
 ## Header/Bundling
----------------
 
 | parameters to controller are available in View or variables set
 | ideally use parameters 
