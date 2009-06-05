@@ -1,0 +1,20 @@
+
+
+# Rack filter
+
+
+# grab json from sub_view get/post
+
+# route to subview ruby classes from json value
+
+{ 'view' : 'index, 'element' : 'h1', 'action' : 'click', dom_id '23121' }
+
+
+dom_id is unique identification for efficiency!!!!
+
+dom is pre-processed and stored in mem_cache
+
+dom_id are tree node ids
+
+
+happens on rack load

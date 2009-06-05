@@ -1,0 +1,11 @@
+
+
+# some rack process to init when web server resarts (whether it is mongrel or apache)
+
+# pass through all view files
+	
+# build hard tree you need to look for (by reading ruby files get method 
+                                        names and even values in initialize!!!)
+
+
+# generate jQuery plugin to those ids requested, only binding to ones defined

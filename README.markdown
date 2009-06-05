@@ -6,17 +6,23 @@ erb was created in 1999, a 20th century technology.
 
 Ruby Template Framework for the 21st Century!
 
+# Existing Ruby Template Engines
+
+Punk: http://rubyforge.org/frs/?group_id=2320&release_id=7224
+http://www.kuwata-lab.com/kwartz/
+http://www.hokstad.com/mini-reviews-of-19-ruby-template-engines.html
 
 ## Initialization
 
 
-<label id='some_label'/>
+<label id='some_label'>JOhn Doe</label>
 
 def initialize 
 	self.some_label.value = current_customer.name
 end
 
 <label id='some_label'>John Doe</lable> 
+
 
 ## Conditions
 
@@ -32,7 +38,7 @@ end
 def initialize
 	@orders = Order.find(:all)
 	if @orders.size < 0
-		order_table.hide()
+		self.('#order_table').hide()
 	end
 end
 
@@ -56,6 +62,27 @@ this.session_form = Session
 this.session_form.action = new_session_path()
 this.session_form.login = Session.login 
 this.session_form.password = Session.password 
+
+
+## Beautiful Blocks
+
+# A generic box to encapsulate some text
+
+def box(title = nil, *args, &block)
+  options = args.extract_options!
+  style = options[:style] ? " style = '#{options[:style]}'" : ''
+
+  b = "<div class=\"box\"#{style}>#{box_label(title) if title}"
+  e = '</div>'
+
+  data = capture(&block)
+  res = b + data + e
+  concat(res, block.binding)
+end
+
+<% box('Name:') do %>
+  <%=h @some_object.name %>
+<% end %>
 
 
 ## Collections
@@ -129,4 +156,15 @@ def initalize
   self.head.meta_tag = @product.title 
   self.head.include_javascript = auto_link
 end
+
+
+### Hooking up to the Mighty Merb
+
+Kernel::use_template_engine
+
+use_template_engine :sub_view
+
+
+
+## CSS3 Selectors: http://www.w3.org/TR/css3-selectors/
 
