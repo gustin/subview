@@ -1,4 +1,4 @@
-# Altered View 
+# Sub View or Altered View or Page View
 
 A next-gen template engine -- cause mixing ruby codes and semantic html (ehem erb) SUCKS!!
 
@@ -6,12 +6,56 @@ erb was created in 1999, a 20th century technology.
 
 Ruby Template Framework for the 21st Century!
 
-# Existing Ruby Template Engines
+## Philosophy
 
-- Kwartz - Erb Version II: http://www.kuwata-lab.com/kwartz/
-- Erector: http://github.com/pivotal/erector/
-- Punk: http://rubyforge.org/frs/?group_id=2320&release_id=7224
-- http://www.hokstad.com/mini-reviews-of-19-ruby-template-engines.html
+To keep html clean, simple, semantic, and separated from Ruby logic. The community focuses so much on separating styles from html, javascript from html, then we stick a patch of logic poo, with Ruby, right in the html.
+
+We are removing dependency, cohesion, see Jim Weircach's talk:
+
+
+## Organization
+
+A ruby file compliments an html file.
+This could reside in the same directory or a separte /subview directory.
+
+/products
+   index.html
+   index.rb
+   new.html
+   new.rb
+   _fresh_jive.html
+   _fresh_jive.rb
+
+/products
+  /subview
+     index.rb
+     new.rb
+     _fresh_jive.rb
+  index.html
+  new.html
+  _fresh_jive.html
+
+
+## Competition
+
+There really is no other solution, in Ruby that follows through with the concept. Asp.net has a similiar concept with code behind pages, but is convoluted with a complex page callback cycle and squirlly even callbacks, too complex. 
+
+Java and PHP have similiar ideas:
+- some examples
+
+This does not compete with Haml at all, is actually complimentary and can help clean up Haml files. 
+Can work in tandem with Erb!
+
+index.erb.html
+index.rb
+
+
+## Existing Ruby Template Engines
+
+- [Kwartz]("http://www.kuwata-lab.com/kwartz") - Erb Version II, write concept, implementation is horrible
+- [Erector]("http://github.com/pivotal/erector/") - Pivotal Builder Crap
+- [Punk]("http://rubyforge.org/frs/?group_id=2320&release_id=7224") - Initializing but adds tags to html
+- [19 Ruby Template Engines]("http://www.hokstad.com/mini-reviews-of-19-ruby-template-engines.html")
 
 ## Initialization
 
