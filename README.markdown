@@ -2,7 +2,7 @@
 
 A next-gen template engine -- cause mixing ruby code and semantic html (via erb) SUCKS!!
 
-erb was created in 1999, a 20th century technology.
+erb was created in 1999, a 20th century technology. What is this Active Server Pages??
 
 Ruby Template Framework for the 21st Century!
 
