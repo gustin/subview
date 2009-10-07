@@ -1,6 +1,6 @@
 # subView
 
-A next-gen template engine -- cause mixing ruby codes and semantic html (ehem erb) SUCKS!!
+A next-gen template engine -- cause mixing ruby code and semantic html (via erb) SUCKS!!
 
 erb was created in 1999, a 20th century technology.
 
@@ -16,7 +16,7 @@ We are reducing cohesion through removing dependecy on locality, see Jim Weircac
 
 ## Coopetition
 
-There really is no other solution, in Ruby that follows through with this concept. Asp.net has a similiar concept with code behind pages, but is convoluted with a complex page callback cycle and squirlly even callbacks, too complex. 
+There really is no other solution, in Ruby that follows through with this concept. Asp.net has a similiar concept with code behind pages, but is convoluted with a complex page callback cycle and squirlly callbacks, too complex. 
 
 Java and PHP have similiar ideas:
 - some examples
