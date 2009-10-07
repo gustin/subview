@@ -1,4 +1,4 @@
-# Sub View
+# subView
 
 A next-gen template engine -- cause mixing ruby codes and semantic html (ehem erb) SUCKS!!
 
