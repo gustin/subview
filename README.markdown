@@ -8,7 +8,7 @@ Ruby Template Framework for the 21st Century!
 
 ## Philosophy
 
-To keep html clean, simple, semantic, and separated from Ruby logic. The community focuses so much on separating styles from html; javascript from html, then we stick a patch of logic poo, with Ruby, right in the html.
+To keep html clean, simple, semantic, and separated from Ruby logic. The community focuses so much on separating css styles from html; javascript from html, then we stick a patch of logic poo, with Ruby, right in the html.
 
 We are reducing cohesion through removing dependecy on locality, see Jim Weircach's talk:
 [The Building Blocks of Modularity]("http://mwrc2009.confreaks.com/14-mar-2009-18-10-the-building-blocks-of-modularity-jim-weirich.html")
