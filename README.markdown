@@ -22,11 +22,12 @@ Java and PHP have similiar ideas:
 - some examples
 
 This does not compete with Haml at all, is actually complimentary and can help clean up Haml files. 
-Can work in tandem with Erb!
+subView can work in tandem with Erb!
 
+<pre><code>
 index.erb.html
 index.rb
-
+</code></pre>
 
 ## Existing Ruby Template Engines
 
@@ -39,6 +40,7 @@ index.rb
 ## Organization
 
 A ruby file compliments an html file.
+
 This could reside in the same directory or a separte /subview directory.
 
 <pre><code>
