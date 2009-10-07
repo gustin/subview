@@ -30,7 +30,7 @@ index.rb
 
 ## Existing Ruby Template Engines
 
-- [Kwartz]("http://www.kuwata-lab.com/kwartz") - Erb Version II by the same author as Erb, has the right concept concept, implementation is horrible
+- [Kwartz]("http://www.kuwata-lab.com/kwartz") - Erb Version II by the same author as Erb, has the right concept, implementation is horrible
 - [Erector]("http://github.com/pivotal/erector/") - Pivotal Builder Crap
 - [Punk]("http://rubyforge.org/frs/?group_id=2320&release_id=7224") - Initializing but adds tags to html
 - [19 Ruby Template Engines]("http://www.hokstad.com/mini-reviews-of-19-ruby-template-engines.html")
@@ -49,17 +49,6 @@ This could reside in the same directory or a separte /subview directory.
    new.rb
    _fresh_jive.html
    _fresh_jive.rb
-</code></pre>
-
-<pre><code>
-/products
-  /subview
-     index.rb
-     new.rb
-     _fresh_jive.rb
-  index.html
-  new.html
-  _fresh_jive.html
 </code></pre>
 
 ## The SubView Class
