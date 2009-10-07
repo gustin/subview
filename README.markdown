@@ -39,7 +39,7 @@ index.rb
 
 ## Organization
 
-A ruby file compliments an html file.
+A ruby file compliments a html file.
 
 This could reside in the same directory or a separte /subview directory.
 
