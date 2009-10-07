@@ -1,8 +1,8 @@
 
 class Index
-  include subView
+  include SubView
 
-  <label id="customer_name">Jonh Doe</>
+  #<label id="customer_name">Jonh Doe</>
   
   def initialize
     self.h1 = 
