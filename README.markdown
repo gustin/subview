@@ -41,6 +41,7 @@ index.rb
 A ruby file compliments an html file.
 This could reside in the same directory or a separte /subview directory.
 
+<pre><code>
 /products
    index.html
    index.rb
@@ -48,7 +49,9 @@ This could reside in the same directory or a separte /subview directory.
    new.rb
    _fresh_jive.html
    _fresh_jive.rb
+</code></pre>
 
+<pre><code>
 /products
   /subview
      index.rb
@@ -57,6 +60,7 @@ This could reside in the same directory or a separte /subview directory.
   index.html
   new.html
   _fresh_jive.html
+</code></pre>
 
 ## The SubView Class
 
