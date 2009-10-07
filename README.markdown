@@ -58,7 +58,7 @@ This could reside in the same directory or a separte /subview directory.
   new.html
   _fresh_jive.html
 
-## The SuvView Class
+## The SubView Class
 
 class Index
   include SubView
