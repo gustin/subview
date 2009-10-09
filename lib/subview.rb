@@ -33,7 +33,8 @@ module SubView
 
       yield l 
 
-      @command_control.register(l)
+      puts l.render
+#      @command_control.register(l)
     end
 
     def self.ul(options={})

@@ -19,19 +19,19 @@ end
 ##
 class View < SubView::Base
 
-  def initialize
-    puts 'base'
-    @command_control = Command.new(self) 
-  end
-
   a(:href => '/localhost') do |a|
     a.href = '/remotehost'
-    a.hide
   end
 
-  ul(:class => 'cusomer_list') do |ul| 
-  
-  end
+#  div(:class => "items") do 
+    ul(:id => 'cusomer_list') do |ul| 
+        
+    end
+
+    li(:id => 'product') do |li|
+      
+    end
+#  end
 
   label :customer_name do |label| 
     label.text = 'John Doe' 
