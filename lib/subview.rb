@@ -15,7 +15,7 @@ module SubView
       Builder.new(@command_control).build  
     end
 
-    def self.form(options={}) 
+    def form(options={}) 
       puts options[:action]
 
       f = Form.new
@@ -25,7 +25,7 @@ module SubView
     end
 
 
-    def self.label(id) 
+    def label(id) 
       # look up id in tree 
       #
       # take block of found dom element and assign html var
@@ -34,10 +34,10 @@ module SubView
       yield l 
 
       puts l.render
-#      @command_control.register(l)
+      @command_control.register(l)
     end
 
-    def self.ul(options={})
+    def ul(options={})
       # all controll variables have to be in the controller.variable 
       #
      # puts "find class #{options[:class]}" 
@@ -46,7 +46,7 @@ module SubView
       # ul(':li => 'name'). each do 
     end
 
-    def self.a(options={}) 
+    def a(options={}) 
       # create command chain for later activation by builder
 
       a = Href.new

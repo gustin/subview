@@ -13,4 +13,5 @@ require 'lib/view'
 
 puts 'startin up....'
 v = View.new
+v.whatever
 v.render

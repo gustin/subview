@@ -18,28 +18,32 @@ end
 # Finally spits out html to render. 
 ##
 class View < SubView::Base
+  
+ def whatever 
 
-  a(:href => '/localhost') do |a|
-    a.href = '/remotehost'
-  end
+    a(:href => '/localhost') do |a|
+      a.href = '/remotehost'
+    end
 
-#  div(:class => "items") do 
-    ul(:id => 'cusomer_list') do |ul| 
+  #  div(:class => "items") do 
+      ul(:id => 'cusomer_list') do |ul| 
+          
+      end
+
+  #    li(:id => 'product') do |li|
         
+   #   end
+  #  end
+
+    label :customer_name do |label| 
+      label.text = 'John Doe' 
     end
 
-    li(:id => 'product') do |li|
-      
+    form(:action => books_path) do |form|
+      form.input.text = 'booya'
+      form.input.text_id = 'identify-me'
     end
-#  end
 
-  label :customer_name do |label| 
-    label.text = 'John Doe' 
-  end
-
-  form(:action => books_path) do |form|
-    form.input.text = 'booya'
-    form.input.text_id = 'identify-me'
   end
 
 #  css('h3.r a.l') do 

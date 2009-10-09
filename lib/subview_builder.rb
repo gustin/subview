@@ -29,7 +29,7 @@ class Command
   end
 
   def execute
-    @commands.each { |cmd| cmd.render }
+    @commands.each { |cmd| puts cmd.render }
     render
   end
 
