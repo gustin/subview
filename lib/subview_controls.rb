@@ -29,7 +29,7 @@ class Href
 end
 
 
-class Label
+class Label 
   attr_accessor :text 
 
   def render

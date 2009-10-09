@@ -4,8 +4,15 @@ module SubView
 
   class Base
 
+    attr_accessor :command_control
+
+    def initialize
+      puts 'base'
+      @command_control = Command.new(self) 
+    end
+
     def render
-      Builder.new.build  
+      Builder.new(@command_control).build  
     end
 
     def self.form(options={}) 
@@ -19,7 +26,6 @@ module SubView
 
 
     def self.label(id) 
-     # puts id
       # look up id in tree 
       #
       # take block of found dom element and assign html var
@@ -27,7 +33,7 @@ module SubView
 
       yield l 
 
-     # puts l.render
+      @command_control.register(l)
     end
 
     def self.ul(options={})

@@ -1,9 +1,9 @@
-require 'rubygems'
-require 'nokogiri'
 
-require 'lib/subview'
-require 'lib/subview_controls'
-require 'lib/subview_builder'
+
+def books_path
+  '/books'
+end
+
 #
 ##
 # The View class is loaded and executed. 
@@ -17,16 +17,16 @@ require 'lib/subview_builder'
 #
 # Finally spits out html to render. 
 ##
-
-def books_path
-  '/books'
-end
-
-
 class View < SubView::Base
+
+  def initialize
+    puts 'base'
+    @command_control = Command.new(self) 
+  end
 
   a(:href => '/localhost') do |a|
     a.href = '/remotehost'
+    a.hide
   end
 
   ul(:class => 'cusomer_list') do |ul| 
@@ -35,15 +35,21 @@ class View < SubView::Base
 
   label :customer_name do |label| 
     label.text = 'John Doe' 
-
   end
 
   form(:action => books_path) do |form|
     form.input.text = 'booya'
     form.input.text_id = 'identify-me'
   end
-end
 
+#  css('h3.r a.l') do 
+#
+#  end
+
+#  xpath('//h3/a[@class="l"]') do
+#
+#  end
+end
 
 
 
