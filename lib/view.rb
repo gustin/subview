@@ -1,10 +1,3 @@
-
-
-def books_path
-  '/books'
-end
-
-#
 ##
 # The View class is loaded and executed. 
 #

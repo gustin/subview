@@ -10,3 +10,9 @@ class Customer
 
 
 end
+
+
+
+def books_path
+  '/books'
+end
