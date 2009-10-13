@@ -19,7 +19,20 @@ end
 ##
 class View < SubView::Base
   
- def whatever 
+  load_partial div(:id => 'delivery_orders'), 
+               'delivery_orders', 
+               options[:orders] 
+  local_partial div(:id => 'customers'),
+                'customers',
+                options[:customers]
+
+  def initilize 
+    options[:orders] = DeliveryOrder.find(:all)
+    options[:customers] = Customer.find(:all) 
+  end
+
+
+ #def whatever 
 
     a(:href => '/localhost') do |a|
       a.href = '/remotehost'
@@ -30,7 +43,7 @@ class View < SubView::Base
           
       end
 
-  #    li(:id => 'product') do |li|
+  #    div.li(:id => 'product') do |li|
         
    #   end
   #  end
@@ -44,7 +57,7 @@ class View < SubView::Base
       form.input.text_id = 'identify-me'
     end
 
-  end
+ # end
 
 #  css('h3.r a.l') do 
 #
